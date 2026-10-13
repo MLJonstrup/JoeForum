@@ -35,10 +35,10 @@ Videoen ligger også under bilag i rapporten.
 3:
 Api Key
 Twilio key:
-accountSid = 'AC6246404e891b0ec4315f48f8b1f5722f'; Kan findes i filen -> user.js , linje 136
-authToken = 'e62028a0e62245d4b570e4b62a6c1aff'; Kan findes i filen -> user.js , linje 137
+API-nøgler og adgangskoder er fjernet fra dette repository. Sæt TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN og GMAIL_APP_PASSWORD som miljøvariabler.
+
 
 
 4:
 Dele af css og html filerne af udarbejdet på baggrund af øvelsestimernes tilgang til udsmykning og design af programmet.
-IP adresse til ssh root@206.189.109.70 kode: 7777
+Adgangsoplysninger til serveren er fjernet fra dette repository.
