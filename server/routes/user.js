@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
     user: "joejuicecbs@gmail.com",
-    pass: "vwko ujkw ifla qqnm", // Husk at bruge en app-adgangskode her
+    pass: process.env.GMAIL_APP_PASSWORD, // set in the environment, never commit passwords
   },
 });
 
@@ -123,8 +123,8 @@ router.post("/createUser", async (req, res) => {
           console.log("Email sent successfully: " + info.response);
 
           // Sender en bekræftelses-SMS via Twilio
-          const accountSid = "AC6246404e891b0ec4315f48f8b1f5722f"; // Indsæt din Twilio Account SID
-          const authToken = "e62028a0e62245d4b570e4b62a6c1aff"; // Indsæt din Twilio Auth Token
+          const accountSid = process.env.TWILIO_ACCOUNT_SID; // set in the environment, never commit keys
+          const authToken = process.env.TWILIO_AUTH_TOKEN; // set in the environment, never commit keys
           const client = require("twilio")(accountSid, authToken);
 
           client.messages
